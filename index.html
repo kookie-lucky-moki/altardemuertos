@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La ofrenda | Día de Muertos</title>
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: #38251f;
+      background: #f7efe2;
+      font-family: "Trebuchet MS", Arial, sans-serif;
+    }
+    .topbar {
+      padding: 12px 6%;
+      color: #fff7e8;
+      background: #713d2d;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      flex-wrap: wrap;
+      letter-spacing: 1px;
+      font-size: .9rem;
+    }
+    .topbar strong { color: #ffd27a; }
+    nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    nav a { color: #fff7e8; text-decoration: none; }
+    nav a:hover { color: #ffd27a; }
+    .cover {
+      padding: 85px 7% 95px;
+      text-align: center;
+      background:
+        linear-gradient(120deg, rgba(50,25,20,.88), rgba(112,56,36,.72)),
+        url("https://images.unsplash.com/photo-1604072366595-e75dc92d6bdc?auto=format&fit=crop&w=1800&q=85") center/cover;
+      color: #fff8ed;
+    }
+    .cover .eyebrow {
+      color: #ffd27a;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-size: .8rem;
+    }
+    .cover h1 {
+      max-width: 900px;
+      margin: 14px auto;
+      font-family: Georgia, serif;
+      font-size: clamp(2.8rem, 7vw, 5.8rem);
+      line-height: 1.02;
+      font-weight: normal;
+    }
+    .cover p { max-width: 650px; margin: 20px auto 0; font-size: 1.1rem; }
+    .button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 13px 23px;
+      color: #3d251b;
+      background: #ffd27a;
+      text-decoration: none;
+      border-radius: 3px;
+      font-weight: bold;
+    }
+    .wrap { width: min(1100px, 88%); margin: auto; }
+    .history {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 45px;
+      align-items: center;
+      padding-top: 75px;
+      padding-bottom: 75px;
+    }
+    .history-mark {
+      padding: 35px;
+      min-height: 230px;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      background: #e8c99b;
+      color: #713d2d;
+      border: 1px solid #c99558;
+      outline: 7px solid #e8c99b;
+      outline-offset: 5px;
+      font: 2rem Georgia, serif;
+    }
+    h2 {
+      margin: 0 0 15px;
+      color: #713d2d;
+      font: normal clamp(2rem, 4vw, 3rem) Georgia, serif;
+    }
+    .history p { line-height: 1.8; }
+    .elements-section {
+      padding: 70px 0 85px;
+      background: #fffaf1;
+    }
+    .section-head { text-align: center; margin-bottom: 38px; }
+    .section-head small { color: #bd6a32; letter-spacing: 3px; text-transform: uppercase; }
+    .section-head p { max-width: 650px; margin: auto; line-height: 1.7; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .item {
+      display: flex;
+      gap: 15px;
+      align-items: flex-start;
+      padding: 22px;
+      background: #f7efe2;
+      border-left: 4px solid #d77a35;
+      min-height: 145px;
+    }
+    .symbol {
+      flex: 0 0 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      background: #713d2d;
+      color: #ffd27a;
+      border-radius: 50%;
+      font-size: 1.5rem;
+    }
+    .item h3 { margin: 1px 0 7px; color: #713d2d; font: bold 1.12rem Georgia, serif; }
+    .item p { margin: 0; font-size: .93rem; line-height: 1.55; }
+    .quote {
+      padding: 65px 8%;
+      text-align: center;
+      background: #713d2d;
+      color: #fff7e8;
+    }
+    .quote blockquote {
+      max-width: 800px;
+      margin: 0 auto;
+      color: #ffd27a;
+      font: italic clamp(1.5rem, 3vw, 2.4rem) Georgia, serif;
+    }
+    .quote p { margin-bottom: 0; }
+    footer {
+      padding: 22px;
+      text-align: center;
+      color: #f7efe2;
+      background: #38251f;
+      font-size: .85rem;
+    }
+    @media (max-width: 800px) {
+      .history { grid-template-columns: 1fr; gap: 28px; }
+      .grid { grid-template-columns: repeat(2, 1fr); }
+      .topbar { justify-content: center; }
+    }
+    @media (max-width: 540px) {
+      .grid { grid-template-columns: 1fr; }
+      nav { justify-content: center; }
+      .cover { padding: 65px 6%; }
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <strong>TRADICIONES DE MÉXICO</strong>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#historia">Origen</a>
+      <a href="#ofrenda">La ofrenda</a>
+    </nav>
+  </div>
+
+  <header class="cover" id="inicio">
+    <div class="eyebrow">31 de octubre · 1 y 2 de noviembre</div>
+    <h1>El altar de<br>Día de Muertos</h1>
+    <p>Una tradición que transforma los recuerdos en flores, aromas, sabores y luz.</p>
+    <a class="button" href="#ofrenda">Descubrir sus elementos</a>
+  </header>
+
+  <main>
+    <section class="history wrap" id="historia">
+      <div class="history-mark">Memoria<br>y tradición</div>
+      <div>
+        <h2>Una tradición que nos une</h2>
+        <p>El Día de Muertos es una celebración mexicana dedicada a recordar a quienes han fallecido. Sus raíces combinan antiguas costumbres de los pueblos originarios con tradiciones incorporadas durante la época virreinal. En estas fechas, las familias preparan altares con objetos y alimentos que les gustaban a sus seres queridos.</p>
+        <p>Más que una decoración, la ofrenda es una manera de expresar cariño y conservar viva la memoria.</p>
+      </div>
+    </section>
+
+    <section class="elements-section" id="ofrenda">
+      <div class="wrap">
+        <div class="section-head">
+          <small>Conoce cada detalle</small>
+          <h2>¿Qué lleva un altar?</h2>
+          <p>Los elementos pueden variar según la región y las costumbres de cada familia. Estos son algunos de los más conocidos y lo que representan.</p>
+        </div>
+
+        <div class="grid">
+          <article class="item"><div class="symbol">🌼</div><div><h3>Cempasúchil</h3><p>Su color y aroma ayudan a señalar el camino hacia la ofrenda.</p></div></article>
+          <article class="item"><div class="symbol">🕯️</div><div><h3>Veladoras</h3><p>Representan la luz que guía y acompaña a las almas.</p></div></article>
+          <article class="item"><div class="symbol">💧</div><div><h3>Agua</h3><p>Se ofrece para calmar la sed después del recorrido.</p></div></article>
+          <article class="item"><div class="symbol">🧂</div><div><h3>Sal</h3><p>Simboliza la purificación y la protección del alma.</p></div></article>
+          <article class="item"><div class="symbol">🍞</div><div><h3>Pan de muerto</h3><p>Es un alimento tradicional que se comparte como ofrenda.</p></div></article>
+          <article class="item"><div class="symbol">💀</div><div><h3>Calaveritas</h3><p>Representan la muerte con color, creatividad y tradición.</p></div></article>
+          <article class="item"><div class="symbol">🎊</div><div><h3>Papel picado</h3><p>Decora el altar y representa el viento y la alegría de la celebración.</p></div></article>
+          <article class="item"><div class="symbol">🖼️</div><div><h3>Fotografías</h3><p>Hacen presentes los recuerdos de las personas homenajeadas.</p></div></article>
+          <article class="item"><div class="symbol">🌫️</div><div><h3>Copal o incienso</h3><p>Su aroma se relaciona con la limpieza y purificación del espacio.</p></div></article>
+          <article class="item"><div class="symbol">🍎</div><div><h3>Frutas</h3><p>Son una muestra de abundancia y generosidad.</p></div></article>
+          <article class="item"><div class="symbol">🍲</div><div><h3>Platillos favoritos</h3><p>Se colocan alimentos que disfrutaba la persona recordada.</p></div></article>
+          <article class="item"><div class="symbol">🌺</div><div><h3>Arco</h3><p>En algunas ofrendas simboliza la entrada y bienvenida al mundo de los vivos.</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote">
+      <blockquote>“Mientras exista alguien que nos recuerde, nunca dejaremos de vivir en su corazón.”</blockquote>
+      <p>Recordar también es una forma de amar.</p>
+    </section>
+  </main>
+
+  <footer>© 2026 · El altar de Día de Muertos · Tradición y memoria mexicana</footer>
+</body>
+</html>
